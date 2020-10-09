@@ -1,0 +1,46 @@
+<h1>Create A Cat</h1>
+
+<form action="<%= cats_url %>" method="POST">
+<label>Name:
+    <input 
+        type="text"
+        name="cat[name]"
+        value="<%= @cat.name %>">
+</label>
+<br>
+<br>
+<label>Color: 
+<select name="cat[color]">
+    <option disabled selected>-- Please Select --</option>
+    <option value="Black">Black</option>
+    <option value="Brown">Brown</option>
+    <option value="Orange">Orange</option>
+    <option value="Green">Green</option>
+    <option value="Gray">Gray</option>
+</select>
+<br>
+<br>
+<label>Birth date:
+    <input type="date"  name= "cat[birth_date]" value="<%= @cat.birth_date %>">
+</label>
+<br>
+<br>
+<label> Sex:
+<select name="cat[sex]">
+    <option disabled selected>-- Please Select --</option>
+    <option value="F">Female</option>
+    <option value="M">Male</option>
+</select>
+</label>
+<br>
+<br>
+<label>Description:
+  
+    <textarea name="cat[description]"
+        value="<%= @cat.description %>"></textarea>
+</label>
+<br>
+<br>
+<input type="submit" value="Create Cat">
+
+</form>
